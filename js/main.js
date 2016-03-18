@@ -1,15 +1,13 @@
 $('html').on('keydown', function (e) {
   var $newDiv = $('<div>');
+  var randTop = Math.random() * 256;
+  var randLeft = Math.random() * 256;
+  var $body = $('body');
+
   $newDiv.addClass('ball');
 
-  var $body = $('body');
-  $body.append($newDiv);
-
-  var top = Math.random() * 256;
-  var left = Math.random() * 256;
-
-  $('.ball').css({
-    top: top,
-    left: left
-  });
-});
+  $body.append($newDiv).css({
+    top: (randTop),
+    left: (randLeft)
+  })
+};
