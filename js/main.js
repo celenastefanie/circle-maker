@@ -1,11 +1,9 @@
-$('html').on('keydown', function (e) {
-  var $newDiv = $('<div>');
-  var randTop = Math.random() * 1000;
-  var randLeft = Math.random() * 1000;
-  var $body = $('body');
+var $html = $('html');
+var $div = $('div');
+var $pick = $('form');
+var $input = $('#pick-color');
 
-  $body.append($newDiv);
-  $newDiv.addClass('ball');
-  $newDiv.css('top', randTop);
-  $newDiv.css('left', randLeft);
+$pick.on('change', function () {
+  console.log('works');
+  $div.css('background-color', $input.val());
 });
